@@ -1,4 +1,4 @@
-//
+ //
 //  ViewController.swift
 //  Switch lesson 2
 //
@@ -12,6 +12,9 @@ class ViewController: UIViewController {
     //let mySwitch = UISwitch()
     let mySwitch2 = UISwitch()
     let button = UIButton()
+    //--------------------------
+    @IBOutlet var helloLabel: UILabel!
+    @IBOutlet var toggleButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +58,10 @@ class ViewController: UIViewController {
         self.view.addSubview(self.button)
 
         self.mySwitch2.addTarget(self, action: #selector(isOn(target:)), for: .valueChanged)
+        
+        
+        helloLabel.isHidden = true
+        toggleButton.layer.cornerRadius = 10
     }
 
     //@objc func switcChange(paramTarget: UISwitch) {
@@ -75,5 +82,17 @@ class ViewController: UIViewController {
             self.button.isUserInteractionEnabled = true
         }
     }
+    
+    @IBAction func makeButtonAction() {
+        if helloLabel.isHidden {
+            helloLabel.isHidden = false
+            toggleButton.setTitle("Hide text", for: .normal)
+        } else {
+            helloLabel.isHidden = true
+            toggleButton.setTitle("Show text", for: .normal)
+        }
+    }
+    
+    
 }
 

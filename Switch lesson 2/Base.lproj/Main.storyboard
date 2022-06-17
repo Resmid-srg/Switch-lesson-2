@@ -33,19 +33,24 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Show text">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="makeButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ra-4w-AYk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="x53-fV-dtF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A1E-4o-PTc"/>
                             <constraint firstItem="x53-fV-dtF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PSd-NH-0zq"/>
                             <constraint firstItem="0El-VB-fMf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q00-CX-Zas"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="x53-fV-dtF" secondAttribute="trailing" id="XeS-lc-fbP"/>
                             <constraint firstItem="x53-fV-dtF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="h2a-Yf-hue"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0El-VB-fMf" secondAttribute="bottom" constant="105" id="iCa-d0-EyL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="helloLabel" destination="x53-fV-dtF" id="PdE-5B-g2M"/>
+                        <outlet property="toggleButton" destination="0El-VB-fMf" id="8GR-8D-gAz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
